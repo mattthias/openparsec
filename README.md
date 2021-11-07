@@ -16,6 +16,15 @@ On Linux:
 - To build the server: make server
 - To build both targets: make
 
+In a chroot:
+- sudo cdebootstrap --arch i386 bullseye parsec-chroot 
+- sudo chroot parsec-chroot
+- inside CHROOT: apt update && apt install build-essential premake4 libsdl2-mixer-dev libsdl2-dev git libncurses-dev
+- inside CHROOT: git clone 
+- inside CHROOT: cd openparsec/platforms/premake
+- inside CHROOT: premake gmake
+- inside CHROOT: make 
+
 On Windows:
 - Visual studio 2012 express and up supported
 - Open the solution file in platforms\vs2012
